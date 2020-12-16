@@ -102,7 +102,7 @@
 
 
 <div class="col-md-12">
-    
+    <hr />
     <button id="open" class="btn btn-primary">Agregar Dato</button>
     <hr />
     <table id="tblStudent" class="table table-bordered table-striped table-responsive table-hover">
@@ -174,8 +174,8 @@
                             + "<td class='productth'>" + item.studentAddress + "</td>"
                             + "<td class='productth'>" + item.studentCreationDate + "</td>"
                             + "<td class='productth'>" + item.studentModificationDate + "</td>"
-                            + "<td class='productth' style='float: right; display: inline - block'><input type='button' value='Editar'/>"
-                            + "<input type='button' value='Eliminar'/></td>"
+                            + "<td class='productth' style='float: right; display: inline - block'><input type='button' class='btn btn-warning' value='Editar'/>"
+                            + "<input type='button' class='btn btn-danger' value='Eliminar'/></td>"
                             + "</tr>";
                         $('#tblStudent tbody').append(rows);
                     });
