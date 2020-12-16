@@ -1,0 +1,6 @@
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Domain\bin\Debug\Domain.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Domain\bin\Debug\Domain.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Domain\obj\Debug\Domain.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Domain\obj\Debug\Domain.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Domain\obj\Debug\Domain.csprojAssemblyReference.cache

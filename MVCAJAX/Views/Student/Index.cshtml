@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    #popup {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1001;
+    }
+
+    .content-popup {
+        margin: 0px auto;
+        margin-top: 120px;
+        position: relative;
+        padding: 10px;
+        width: 800px;
+        min-height: 250px;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 5px #666666;
+    }
+
+        .content-popup h2 {
+            color: #48484B;
+            border-bottom: 1px solid #48484B;
+            margin-top: 0;
+            padding-bottom: 4px;
+        }
+
+    .popup-overlay {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        display: none;
+        background-color: #777777;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .close {
+        position: absolute;
+        right: 15px;
+    }
+</style>
+
+
+<div id="popup" style="display: none;">
+    <div class="content-popup">
+        <div class="close"><a href="#" id="close">Cerrar</a></div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Please enter the details below.</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group col-md-6">
+                    <label>Student Code</label>
+                    <input type="text" name="StudentCode" id="StudentCode" class="form-control" placeholder="Enter Student Code" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Student Name</label>
+                    <input type="text" name="StudentName" id="StudentName" class="form-control" placeholder="Enter Student Name" required />
+                </div>              
+            </div>
+            <div class="panel-body">
+                <div class="form-group col-md-6">
+                    <label>Student Last Name</label>
+                    <input type="text" name="StudentLastName" id="StudentLastName" class="form-control" placeholder="Enter Student Last Name" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Student Address</label>
+                    <input type="text" name="StudentAddress" id="StudentAddress" class="form-control" placeholder="Enter Student Address" required />
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group col-md-6">
+                    <label>Creation Date</label>
+                    <input type="text" name="StudentCreationDate" id="StudentCreationDate" class="form-control" placeholder="Enter Creation Date" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Modification Date</label>
+                    <input type="text" name="StudentModificationDate" id="StudentModificationDate" class="form-control" placeholder="Enter Modification Date" required />
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group col-md-3">
+                    <div>
+                        <input class="btn btn-primary" type="button" name="submitButton" id="btnSave" value="Guardar" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-overlay"></div>
+
+
+<div class="col-md-12">
+    
+    <button id="open" class="btn btn-primary">Agregar Dato</button>
+    <hr />
+    <table id="tblStudent" class="table table-bordered table-striped table-responsive table-hover">
+        <thead>
+            <tr>
+                <th align="left" class="productth">ID</th>
+                <th align="left" class="productth">Student Code</th>
+                <th align="left" class="productth">Student Name</th>
+                <th align="left" class="productth">Student Last Name</th>
+                <th align="left" class="productth">Student Address</th>
+                <th align="left" class="productth">Student Creation Date</th>
+                <th align="left" class="productth">Student Modification Date</th>
+                <th align="left" class="productth">Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+@section Scripts
+    {
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            LoadData();
+            $("#btnSave").click(function () {
+                //alert("");
+                var std = {};
+                std.studentCode = $("#StudentCode").val();
+                std.studentName = $("#StudentName").val();
+                std.studentLastName = $("#StudentLastName").val();
+                std.studentAddress = $("#StudentAddress").val();
+                std.studentCreationDate = $("#StudentCreationDate").val();
+                std.studentModificationDate = $("#StudentModificationDate").val();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("createStudent")',
+                    data: '{std: ' + JSON.stringify(std) + '}',
+                    dataType: "json",
+                    contentType: "application/json; charset-utf-8",
+                    success: function () {
+                        //alert("Data has been added successfully.");
+                        LoadData();
+                    },
+                    error: function () {
+                        alert("Error while inserting data.");
+                    }
+                });
+                return false;
+            });
+        });
+
+        function LoadData() {
+            $("#tblStudent tbody tr").remove();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("getStudent")',
+                dataType: 'json',
+                data: { id: '' },
+                success: function (data) {
+                    var items = '';
+                    $.each(data, function (i, item) {
+                        var rows = "<tr>"
+                            + "<td class='productth'>" + item.studentID + "</td>"
+                            + "<td class='productth'>" + item.studentCode+ "</td>"
+                            + "<td class='productth'>" + item.studentName + "</td>"
+                            + "<td class='productth'>" + item.studentLastName + "</td>"
+                            + "<td class='productth'>" + item.studentAddress + "</td>"
+                            + "<td class='productth'>" + item.studentCreationDate + "</td>"
+                            + "<td class='productth'>" + item.studentModificationDate + "</td>"
+                            + "<td class='productth' style='float: right; display: inline - block'><input type='button' value='Editar'/>"
+                            + "<input type='button' value='Eliminar'/></td>"
+                            + "</tr>";
+                        $('#tblStudent tbody').append(rows);
+                    });
+                },
+                error: function (ex) {
+                    var r = jQuery.parseJSON(response.responseText);
+                    alert("Message" + r.Message);
+                    alert("StrackTrace" + r.StrackTrace);
+                    alert("ExceptionType" + r.ExceptionType);
+                }
+            });
+            return false;
+        }
+
+
+
+        $(document).ready(function () {
+            $('#open').on('click', function () {
+                $('#popup').fadeIn('slow');
+                $('.popup-overlay').fadeIn('slow');
+                $('.popup-overlay').height($(window).height());
+                return false;
+            });
+
+            $('#close').on('click', function () {
+                $('#popup').fadeOut('slow');
+                $('.popup-overlay').fadeOut('slow');
+                return false;
+            });
+        });
+    </script>
+}

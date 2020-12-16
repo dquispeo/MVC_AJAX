@@ -1,0 +1,17 @@
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Service.dll.config
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Service.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Service.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Domain.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\EntityFramework.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\EntityFramework.SqlServer.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Infraestructure.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Domain.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Infraestructure.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\Infraestructure.dll.config
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\EntityFramework.xml
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\bin\Debug\EntityFramework.SqlServer.xml
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\obj\Debug\Service.csprojAssemblyReference.cache
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\obj\Debug\Service.csproj.CopyComplete
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\obj\Debug\Service.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Service\obj\Debug\Service.pdb

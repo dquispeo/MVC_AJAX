@@ -1,0 +1,17 @@
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\Infraestructure.dll.config
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\Infraestructure.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\Infraestructure.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\Domain.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\EntityFramework.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\Domain.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\EntityFramework.xml
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.csprojAssemblyReference.cache
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.csproj.CoreCompileInputs.cache
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.csproj.CopyComplete
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.dll
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.pdb
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.Migrations.v2.resources
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.csproj.GenerateResource.cache
+E:\ProjectVisualStudio\6-ciclo\MVCAJAX\Infraestructure\obj\Debug\Infraestructure.Migrations.v3.resources
